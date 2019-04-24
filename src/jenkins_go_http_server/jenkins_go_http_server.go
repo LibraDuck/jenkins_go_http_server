@@ -16,8 +16,13 @@ func HelloServer(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Hello World!"))
 }
 
+func ReturnName(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("My name is TJ."))
+}
+
 func main() {
 	http.HandleFunc("/hello", HelloServer)
+	http.HandleFunc("/name", ReturnName)
 	err := http.ListenAndServe(":12345", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
