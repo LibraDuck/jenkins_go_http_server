@@ -1,5 +1,5 @@
 #!/bin/sh
-GOPATH=$WORKSPACE
+GOPATH=/var/lib/jenkins/workspace/jenkins_go_http_server
 BIN_PATH=$GOPATH/bin
 cd $BIN_PATH
 echo "pwd is $PWD"
